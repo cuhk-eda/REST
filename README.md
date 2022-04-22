@@ -2,6 +2,7 @@
 
 REST is a reinforcement learning framework for rectilinear Steiner minimum tree (RSMT) construction.
 Read our paper for more details:
+
 * Jinwei Liu, Gengjie Chen, and Evangeline FY Young. "[REST: Constructing Rectilinear Steiner Minimum Tree via Reinforcement Learning.](https://ieeexplore.ieee.org/document/9586209)" 2021 58th ACM/IEEE Design Automation Conference (DAC). IEEE, 2021.
 
 ## Dependencies
@@ -15,29 +16,38 @@ Start a new training process for degree 20 by
 ~~~bash
 python3 train.py --degree 20
 ~~~
+<br>
 
 ## Testing
-Test the newly trained model by
+1. Test the trained model using randomly generated data set by
 
 ~~~bash
 python3 test.py --degree 20
 ~~~
+<br>
 
-
-Or use the trained parameters included with this repository
+2. Or use the trained parameters included with this repository
 
 ~~~bash
 python3 test.py --degree 20 --experiment DAC21
 ~~~
+<br>
 
-
-As mentioned in the paper, the percentage error can be further reduced by using 
+3. As mentioned in the paper, the percentage error can be further reduced by using 
 multiple transformations of the input point set for inference. Inference using 
 all eight transformations by
 
 ~~~bash
 python3 test.py --degree 20 --experiment DAC21 --transformation 8
 ~~~
+<br>
+
+4. Lastly, if you want to test the same data set as in the paper
+
+~~~bash
+python3 test.py --degree 20 --test_data test_set/test20.txt
+~~~
+<br>
 
 ## Results
 Using only one of the transformations for inference
@@ -90,4 +100,5 @@ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
 CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
 POSSIBILITY OF SUCH DAMAGE.
+
 

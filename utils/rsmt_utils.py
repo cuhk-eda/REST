@@ -103,7 +103,7 @@ def plot_rest(input, output):
     for i in range(len(x_low)):
         plt.plot([x_low[i], x_high[i]], [input[i][1], input[i][1]], '-', color=edge_color, linewidth=edge_width)
         plt.plot([input[i][0], input[i][0]], [y_low[i], y_high[i]], '-', color=edge_color, linewidth=edge_width)
-    plt.plot(list(input[:,0]), list(input[:,1]), 's', color=term_color, markerfacecolor='white', markersize=term_size, markeredgewidth=edge_width)
+    plt.plot(list(input[:,0]), list(input[:,1]), 's', color=term_color, markerfacecolor='black', markersize=term_size, markeredgewidth=edge_width)
     plt.xlim(-0.05, 1.05)
     plt.ylim(-0.05, 1.05)
     # fig.savefig('rsmt.pdf')
@@ -116,7 +116,7 @@ def plot_gst_rsmt(terms, sps, edges):
         v = edges[i][1]
         plt.plot([points[u][0], points[u][0]], [points[u][1], points[v][1]], '-', color=edge_color, linewidth=edge_width)
         plt.plot([points[u][0], points[v][0]], [points[v][1], points[v][1]], '-', color=edge_color, linewidth=edge_width)
-    plt.plot([terms[i][0] for i in range(degree)], [terms[i][1] for i in range(degree)], 's', markerfacecolor='white', color=term_color, markersize=term_size, markeredgewidth=edge_width)
+    plt.plot([terms[i][0] for i in range(degree)], [terms[i][1] for i in range(degree)], 's', markerfacecolor='black', color=term_color, markersize=term_size, markeredgewidth=edge_width)
     plt.xlim(-0.05, 1.05)
     plt.ylim(-0.05, 1.05)        
     

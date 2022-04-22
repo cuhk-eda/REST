@@ -112,12 +112,12 @@ if args.run_optimal.lower() == 'true':
     print()
 
 if args.plot_first.lower() == 'true':
-    fig = plt.figure(figsize=(10, 5))
+    fig = plt.figure(figsize=(10, 4.6))
     plt.subplot(1, 2, 1)
     # Optimal RSMT
     gst_length, sps, edges = evaluator.gst_rsmt(test_cases[0])
     plot_gst_rsmt(test_cases[0], sps, edges)
-    plt.annotate('Optimal' + str(round(gst_length, 3)), (-0.04, -0.04))
+    plt.annotate('Optimal ' + str(round(gst_length, 3)), (-0.04, -0.04))
 
     plt.subplot(1, 2, 2)
     # REST solution
